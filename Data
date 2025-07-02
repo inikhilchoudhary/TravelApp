@@ -1,0 +1,138 @@
+<!-- travel_recommendation.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelBloom</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <a href="travel_recommendation.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact Us</a>
+    <input type="text" id="searchInput" placeholder="Search...">
+    <button onclick="searchPlaces()">Search</button>
+    <button onclick="clearResults()">Reset</button>
+  </nav>
+
+  <div class="home">
+    <h1>Welcome to TravelBloom</h1>
+    <p>Explore the best travel recommendations tailored for you!</p>
+    <div class="social-icons">
+      <img src="images/facebook.png" alt="Facebook">
+      <img src="images/twitter.png" alt="Twitter">
+    </div>
+  </div>
+
+  <div id="results"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+<!-- style.css -->
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url('images/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffffdd;
+  padding: 10px;
+  gap: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+nav input, nav button {
+  padding: 5px;
+  font-size: 14px;
+}
+
+.home {
+  text-align: center;
+  margin-top: 100px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.social-icons img {
+  width: 30px;
+  margin: 5px;
+}
+
+.recommendation {
+  background: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.recommendation img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+}
+
+<!-- script.js -->
+let data = [];
+
+fetch('travel_recommendation_api.json')
+  .then(response => response.json())
+  .then(json => {
+    data = json;
+    console.log("Data loaded", data);
+  })
+  .catch(error => console.error("Error loading data:", error));
+
+function searchPlaces() {
+  const input = document.getElementById("searchInput").value.toLowerCase();
+  let keyword = "";
+
+  if (input.includes("beach")) keyword = "beach";
+  else if (input.includes("temple")) keyword = "temple";
+  else if (input.includes("country")) keyword = "country";
+
+  const filtered = data.filter(item => item.keyword === keyword);
+  const results = document.getElementById("results");
+  results.innerHTML = "";
+
+  if (filtered.length > 0) {
+    filtered.forEach(place => {
+      results.innerHTML += `
+        <div class="recommendation">
+          <img src="${place.imageUrl}" alt="${place.name}">
+          <h3>${place.name}</h3>
+          <p>${place.description}</p>
+        </div>
+      `;
+    });
+  } else {
+    results.innerHTML = "<p>No recommendations found.</p>";
+  }
+}
+
+function clearResults() {
+  document.getElementById("results").innerHTML = "";
+  document.getElementById("searchInput").value = "";
+}

@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  background-color: black;
+  font-family: Arial, sans-serif;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: black;
+  flex-wrap: wrap; /* optional for small screens */
+}
+.header-container a{
+    text-decoration: none;
+}
+.logo h2 {
+  color: aliceblue;
+  margin: 0;
+}
+
+.nav a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  position: relative;
+  padding: 5px;
+  transition: color 0.3s;
+}
+
+/* Hover effect */
+.nav a:hover {
+  color: #00bcd4; /* light blue or any color you like */
+}
+
+
+
+/* Active link underline (permanent) */
+.nav a.active::after {
+  width: 100%;
+  background-color: #00bcd4;
+}
+
+
+.search-bar {
+  display: flex;
+  gap: 5px;
+}
+
+.search-bar input {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  opacity: 0.5; 
+}
+.search-bar button {
+  border-radius: 20px;
+  padding: 6px 12px;
+  border: none;
+  cursor: pointer;
+  
+}
+
+/* First button – Search */
+.search-bar button:first-child {
+  background-color: #00e1ff; /* Blue */
+  color: black;
+}
+/* Second button – Clear */
+.search-bar button:last-child {
+  background-color: #e40f00; /* Red */
+}
+section{
+    padding: 0px;
+    color: white;
+    height: auto;
+}
+
+.home-main-container {
+  background-image: url('/images/pexels-apasaric-1285625.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 600px;
+  color: white;
+  text-align: center;
+  margin-top: -60px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-inner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* space between intro and search */
+}
+
+.intro-box {
+  background-color: rgba(255, 255, 255, 0.5); /* ✅ replaces opacity */
+  margin: 20px;
+  color: black;
+  height: auto;
+  width: 670px;
+  border-radius: 20px;
+}
+.keypoints{
+    text-align:start;
+    padding: 20px;
+}
+.home-search-inner button{
+    border: none;
+    border-radius: 20px;
+    width: 500px;
+    text-align: center;
+    background-color: #00bcd4;
+}
+.home-search-inner input{
+    border: none;
+    border-radius: 20px;
+    width: 500px;
+    text-align: center;
+    background-color: #00bcd4;
+}
