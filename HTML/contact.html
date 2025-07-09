@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Travelora</title>
+  <link rel="stylesheet" href="/CSS/main.css">
+</head>
+<body>
+
+  <!-- Header same as other pages -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <a href="./index.html"><h2>TRAVELORA</h2></a>
+      </div>
+
+      <nav class="nav">
+        <a href="./index.html">Home</a>
+        <a href="./contact.html" class="active">Contact</a>
+        <a href="./about.html">About Us</a>
+      </nav>
+
+      <div class="search-bar">
+        <input type="text" id="searchBar" placeholder="Destination or keyword">
+        <button onclick="searchResult()">Search</button>
+        <button onclick="ClearSearchResult()">Clear</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="contact-main-container">
+      
+      <!-- Left Side: Text -->
+      <div class="contact-info">
+        <h1>Contact Us</h1>
+        <p>
+          We'd love to hear from you! Whether you have a question about a destination,
+          need assistance with trip planning, or just want to say hello — our team is ready to help.
+        </p>
+      </div>
+
+      <!-- Right Side: Form -->
+      <div class="contact-form">
+        <form action="#">
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <textarea rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+<script src="/JS/main.js"></script>
+</body>
+</html>

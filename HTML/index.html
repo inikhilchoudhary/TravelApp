@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>TravelOra</title>
-  <link rel="stylesheet" href="/CSS/main.css">
+  <link rel="stylesheet" href="/CSS/main.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
 <body>
-  <!--Header Part-->
+
+  <!-- Header -->
   <header>
     <div class="header-container">
       <div class="logo">
@@ -16,22 +18,24 @@
 
       <nav class="nav">
         <a href="./index.html">Home</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About Us</a>
+        <a href="./contact.html">Contact</a>
+        <a href="./about.html">About Us</a>
       </nav>
 
       <div class="search-bar">
-        <input type="text" id="searchBar" placeholder="Destination or keyword">
+        <input type="text" id="searchBar" placeholder="Destination or keyword" />
         <button onclick="searchResult()">Search</button>
         <button onclick="ClearSearchResult()">Clear</button>
       </div>
     </div>
   </header>
 
-  <!--Home Section-->
+  <!-- Home Section -->
   <section id="home">
     <div class="home-main-container">
       <div class="home-inner-container">
+
+        <!-- Intro -->
         <div class="intro-box">
           <h2>Travelora — "Where Every Journey Begins With Wonder"</h2>
           <div class="keypoints">
@@ -46,22 +50,29 @@
           </div>
         </div>
 
+        <!-- Optional second input field (for styling demo only, not functional) -->
         <div class="home-search-inner">
-          <button onclick="searchResult()"><input type="text" placeholder="Find Your Destination Now"></button> 
+          <input type="text" placeholder="Find Your Destination Now" />
         </div>
+
+        <!-- Social Icons -->
+        <div class="social-icon">
+          <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+
+      </div>
     </div>
   </section>
-  
-  <!--About Section-->
-  <section id="about">
-    <p>ABout content</p>
+
+  <!-- 🔍 Results Section (Dynamic Recommendations Appear Here) -->
+  <section id="results" class="results-container">
+    <!-- JavaScript will inject cards here -->
   </section>
 
-  <!--Contact Section-->
-  <section id="contact">
-    <p>contact content</p>
-  </section>
-  
-  
+  <!-- JS File -->
+  <script src="/JS/main.js"></script>
 </body>
 </html>

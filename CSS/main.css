@@ -10,11 +10,13 @@ body {
   align-items: center;
   padding: 15px 30px;
   background-color: black;
-  flex-wrap: wrap; /* optional for small screens */
+  flex-wrap: wrap;
 }
-.header-container a{
-    text-decoration: none;
+
+.header-container a {
+  text-decoration: none;
 }
+
 .logo h2 {
   color: aliceblue;
   margin: 0;
@@ -29,19 +31,14 @@ body {
   transition: color 0.3s;
 }
 
-/* Hover effect */
 .nav a:hover {
-  color: #00bcd4; /* light blue or any color you like */
+  color: #00bcd4;
 }
 
-
-
-/* Active link underline (permanent) */
 .nav a.active::after {
   width: 100%;
   background-color: #00bcd4;
 }
-
 
 .search-bar {
   display: flex;
@@ -52,29 +49,29 @@ body {
   padding: 5px 10px;
   border-radius: 5px;
   border: none;
-  opacity: 0.5; 
+  opacity: 0.5;
 }
+
 .search-bar button {
   border-radius: 20px;
   padding: 6px 12px;
   border: none;
   cursor: pointer;
-  
 }
 
-/* First button – Search */
 .search-bar button:first-child {
-  background-color: #00e1ff; /* Blue */
+  background-color: #00e1ff;
   color: black;
 }
-/* Second button – Clear */
+
 .search-bar button:last-child {
-  background-color: #e40f00; /* Red */
+  background-color: #e40f00;
 }
-section{
-    padding: 0px;
-    color: white;
-    height: auto;
+
+section {
+  padding: 0px;
+  color: white;
+  height: auto;
 }
 
 .home-main-container {
@@ -82,11 +79,10 @@ section{
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 600px;
+  height: 900px;
   color: white;
   text-align: center;
   margin-top: -60px;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -96,32 +92,212 @@ section{
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px; /* space between intro and search */
+  gap: 20px;
 }
 
 .intro-box {
-  background-color: rgba(255, 255, 255, 0.5); /* ✅ replaces opacity */
+  background-color: rgba(255, 255, 255, 0.5);
   margin: 20px;
   color: black;
   height: auto;
   width: 670px;
   border-radius: 20px;
 }
-.keypoints{
-    text-align:start;
-    padding: 20px;
+
+.keypoints {
+  text-align: start;
+  padding: 20px;
 }
-.home-search-inner button{
-    border: none;
-    border-radius: 20px;
-    width: 500px;
-    text-align: center;
-    background-color: #00bcd4;
+
+.home-search-inner button {
+  border: none;
+  border-radius: 20px;
+  width: 500px;
+  text-align: center;
+  background-color: #00bcd4;
 }
-.home-search-inner input{
-    border: none;
-    border-radius: 20px;
-    width: 500px;
-    text-align: center;
-    background-color: #00bcd4;
+
+.home-search-inner input {
+  border: none;
+  border-radius: 20px;
+  width: 500px;
+  text-align: center;
+  background-color: #00bcd4;
+}
+
+.social-icon {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.social-icon a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+  background-color: white;
+  border-radius: 50%;
+  color: #000;
+  font-size: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.social-icon a:hover {
+  background-color: #00bcd4;
+  color: white;
+}
+
+.about-main-container {
+  background-image: url('/images/aboutBg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 900px;
+  margin-top: -60px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.about-content-wrapper {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: black;
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 800px;
+}
+
+.about-content-wrapper h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.about-content-wrapper p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+#contact {
+  min-height: 100vh;
+  background-image: url('/images/pexels-apasaric-1285625.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  height: 900px;
+  align-items: center;
+  padding: 60px 20px;
+  margin-top: -60px;
+  box-sizing: border-box;
+}
+
+.contact-main-container {
+  display: flex;
+  max-width: 1000px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.contact-info {
+  flex: 1;
+  color: #333;
+}
+
+.contact-info h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #00bcd4;
+}
+
+.contact-info p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.contact-form {
+  flex: 1;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  resize: none;
+  outline: none;
+}
+
+.contact-form button {
+  padding: 12px;
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #0097a7;
+}
+
+.results-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.result-card {
+  width: 300px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  text-align: left;
+  padding-bottom: 10px;
+}
+
+.result-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.result-card h3 {
+  margin: 10px;
+  font-size: 20px;
+}
+
+.result-card p {
+  margin: 10px;
+  font-size: 14px;
+}
+
+.result-card .time {
+  font-weight: bold;
+  color: #00bcd4;
 }

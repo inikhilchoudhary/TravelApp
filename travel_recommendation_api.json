@@ -1,0 +1,40 @@
+[
+  {
+    "category": "beach",
+    "name": "Goa Beach",
+    "description": "Golden sand beaches, palm trees, and the vibrant nightlife of Goa.",
+    "imageUrl": "/images/goa.jpg"
+  },
+  {
+    "category": "beach",
+    "name": "Varkala Beach",
+    "description": "A stunning cliff-side beach in Kerala with mineral springs and a laid-back vibe.",
+    "imageUrl": "/images/varkala.jpg"
+  },
+  {
+    "category": "temple",
+    "name": "Kedarnath Temple",
+    "description": "A sacred Hindu temple in the Himalayas dedicated to Lord Shiva.",
+    "imageUrl": "/images/kedarnath.jpg"
+  },
+  {
+    "category": "temple",
+    "name": "Meenakshi Temple",
+    "description": "Famous for its stunning Dravidian architecture in Madurai, Tamil Nadu.",
+    "imageUrl": "/images/meenakshi.jpg"
+  },
+  {
+    "category": "country",
+    "name": "Italy",
+    "description": "From Rome’s ancient ruins to Venice’s canals — a cultural treasure.",
+    "imageUrl": "/images/italy.jpg",
+    "timezone": "Europe/Rome"
+  },
+  {
+    "category": "country",
+    "name": "Japan",
+    "description": "A beautiful fusion of tradition and technology.",
+    "imageUrl": "/images/japan.jpg",
+    "timezone": "Asia/Tokyo"
+  }
+]
